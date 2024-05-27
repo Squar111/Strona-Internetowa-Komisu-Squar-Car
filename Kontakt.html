@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Komis Samochodowy Squar-Car</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+<body>
+    <header>
+        <h1>Kontakt</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Index.html">Strona główna</a></li>
+            <li class="additional-options">
+                <a href="#">Sklep</a>
+                <div class="options-content">
+                    <a href="sklep detail.html">Kosmetyki do auta oraz Car-Detailing</a>
+                    <a href="sklep czesci.html">Części samochodowe</a>
+            <li class="additional-options">
+                <a href="#">Oferta</a>
+                <div class="options-content">
+
+                    <a href="Sprowadź auto.html">Sprowadź auto</a>
+                    <a href="Kup teraz.html">Kup teraz</a>
+                </div>
+            </li>
+            <li><a href="Kontakt.html">Kontakt</a></li>
+            <li class="additional-options">
+                <a href="#">Detailing</a>
+                <div class="options-content">
+                    <a href="Cennik.html">Cennik</a>
+                    <a href="Realizacje.html">Realizacje</a>
+                </div>
+            </li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="Opinie klientów.html">Opinie</a></li>
+            <li><a href="O nas.html">O nas</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <h3>Dane kontaktowe:</h3>
+        <p>Telefon: 123-123-123</p>
+        <p>E-mail: skwara.lukasz@wp.pl</p>
+        <p>Adres: Goszczewo 5a 87-700</p>
+    </aside>
+    <div style="padding: 60px;">
+        <style>
+            .contact-form {
+                background-image: url('formularz tło.jpg');
+                background-size: cover;
+                background-position: center; 
+                padding: 20px; 
+            }
+        </style>
+        <article class="contact-form">
+            <form class="contact-form" action="#" method="post">
+
+                <h2>Sprowadzimy Tobie wymażoną fure!</h2>
+                <div class="contact-image"></div> 
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                    <input type="email" name="email" placeholder="Adres e-mail" required>
+                    <input type="number" name="age" placeholder="Wiek">
+                    <input type="text" name="phone" placeholder="Numer telefonu" pattern="[0-9]{9}" title="Numer telefonu powinien składać się z 9 cyfr" required>
+                </div>
+                <div class="form-group">
+                    <label>Podaj swoje zdjęcie w celu weryfikacji:</label><br>
+                    <input type="file" name="photo" accept="image/*">
+
+                    <select name="budget" required>
+                        <option value="">Wybierz budżet</option>
+                        <option value="do-10-tys">Do 10 tysięcy złotych</option>
+                        <option value="10-20-tys">10-20 tysięcy złotych</option>
+                        <option value="20-30-tys">20-30 tysięcy złotych</option>
+                        <option value="30-50-tys">30-50 tysięcy złotych</option>
+                        <option value="powyzej-50-tys">Powyżej 50 tysięcy złotych</option>
+                    </select>
+                    <select name="brand" required>
+                        <option value="">Wybierz markę</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Renault">Renault</option>
+                        <option value="Peugeot">Peugeot</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Opel">Opel</option>
+                        <option value="Skoda">Skoda</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Citroen">Citroen</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Seat">Seat</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Kia">Kia</option>
+                        <option value="Volvo">Volvo</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Dacia">Dacia</option>
+                        <option value="Mini">Mini</option>
+                        <option value="Jeep">Jeep</option>
+                        <option value="Land Rover">Land Rover</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="Smart">Smart</option>
+                        <option value="Jaguar">Jaguar</option>
+                        <option value="Alfa Romeo">Alfa Romeo</option>
+                        <option value="Lancia">Lancia</option>
+                        <option value="Lexus">Lexus</option>
+                        <option value="Suzuki">Suzuki</option>
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Podaj model. Lub jeśli nie znasz to cechy charakterystyczne, w celu rozpoznania odpowiedniego dla Ciebie auta :D" rows="5" required></textarea>
+                    <label for="requirements">Wymagania (wyposażenie):</label>
+                    <input type="text" name="requirements" id="requirements">
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label>Czy auto może być:</label><br>
+                        <label for="damaged"><input type="checkbox" id="damaged" name="condition[]" value="damaged"> Uszkodzone</label><br>
+                        <label for="flooded"><input type="checkbox" id="flooded" name="condition[]" value="flooded"> Po powodzi</label><br>
+                        <label for="stolen"><input type="checkbox" id="stolen" name="condition[]" value="stolen"> Kradzione w przeszłości</label><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Wybór paliwa zasilającego samochód:</label><br>
+                        <label for="petrol"><input type="checkbox" id="petrol" name="fuel[]" value="petrol"> Benzyna</label><br>
+                        <label for="diesel"><input type="checkbox" id="diesel" name="fuel[]" value="diesel"> Olej napędowy (Diesel)</label><br>
+                        <label for="electric"><input type="checkbox" id="electric" name="fuel[]" value="electric"> Elektryczne</label><br>
+                        <label for="hybrid"><input type="checkbox" id="hybrid" name="fuel[]" value="hybrid"> Hybrydowe</label><br>
+                    </div>
+                    <div class="form-group">
+                        <label>Przedziały mocy silnika:</label><br>
+                        <select name="enginePower">
+                            <option value="">Wybierz przedział mocy silnika</option>
+                            <option value="0-100">0 - 100 KM</option>
+                            <option value="101-200">101 - 200 KM</option>
+                            <option value="201-300">201 - 300 KM</option>
+                            <option value="301-400">301 - 400 KM</option>
+                            <option value="401-500">401 - 500 KM</option>
+                            <option value="500+">Powyżej 500 KM</option>
+                        </select>
+                        <div class="form-group">
+                            <label>Typ nadwozia:</label><br>
+                            <label for="sedan"><input type="radio" id="sedan" name="bodyType" value="sedan"> Sedan</label><br>
+                            <label for="hatchback"><input type="radio" id="hatchback" name="bodyType" value="hatchback"> Hatchback</label><br>
+                            <label for="suv"><input type="radio" id="suv" name="bodyType" value="suv"> SUV</label><br>
+                            <label for="coupe"><input type="radio" id="coupe" name="bodyType" value="coupe"> Coupe</label><br>
+                            <label for="van"><input type="radio" id="van" name="bodyType" value="van"> Van</label><br>
+                            <label for="pickup"><input type="radio" id="pickup" name="bodyType" value="pickup"> Pickup</label><br>
+                            <label for="convertible"><input type="radio" id="convertible" name="bodyType" value="Dostawczy"> Kabriolet</label><br>
+                            <label for="wagon"><input type="radio" id="wagon" name="bodyType" value="wagon"> Kombi</label><br>
+                            <label for="minivan"><input type="radio" id="minivan" name="bodyType" value="minivan"> Prawdziwe 4x4</label><br>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="textarea1">Jakieś pytania? Pisz Śmiało :</label>
+                        <textarea id="textarea1" name="textarea1" rows="4" cols="50"></textarea>
+                    </div>
+                    <input type="submit" value="Wyślij">
+            </form>
+        </article>
+
+
+        <aside>
+            <h3>Dane kontaktowe:</h3>
+            <p>Telefon: 123-123-123</p>
+            <p>E-mail: skwara.lukasz@wp.pl</p>
+            <p>Adres: Goszczewo 5a 87-700</p>
+        </aside>
+
+        <footer>
+            <p>&copy; 2024 Komis Samochodowy. Wszelkie prawa zastrzeżone. <br>Autor: Łukasz Skwara <br> Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.</p>
+        </footer>
+
+        <script src="scripts.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.querySelector('.contact-form');
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    alert('Dziękujemy za zaufanie! Nasi fachowcy już szukają odpowiedniego samochodu!');
+                });
+            });
+        </script>
+
+</body>
+</html>

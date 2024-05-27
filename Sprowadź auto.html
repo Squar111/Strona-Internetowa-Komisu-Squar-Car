@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komis Samochodowy Squar-Car - Realizacje</title>
+    <link rel="stylesheet" href="Menu.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        article {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        header {
+            background-color: #444;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+                color: orange; 
+
+            }
+
+            header nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+                header nav ul li {
+                    margin-right: 20px;
+                }
+
+                    header nav ul li a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+
+                        header nav ul li a:hover {
+                            color: #ccc;
+                        }
+        .realizacja {
+            margin-bottom: 40px;
+        }
+
+            .realizacja h3 {
+                margin-bottom: 10px;
+                text-align: center;
+                color: orange; 
+            }
+
+            .realizacja p {
+                margin-bottom: 10px;
+                text-align: justify;
+            }
+
+        .gallery {
+            margin-bottom: 20px;
+        }
+
+            .gallery img {
+                width: 100%;
+                max-width: 300px;
+                display: block;
+                margin: 0 auto;
+            }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: orange;
+        }
+
+        footer {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+            footer p {
+                margin: 0;
+                font-size: 14px;
+            }
+        .converter {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .converter input, .converter select {
+                padding: 10px;
+                margin: 5px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: none;
+                background-color: #444;
+                color: #fff;
+            }
+
+            .converter button {
+                padding: 10px 20px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: none;
+                background-color: orange;
+                color: #fff;
+                cursor: pointer;
+            }
+
+                .converter button:hover {
+                    background-color: darkorange;
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Komis Samochodowy Squar-Car - Sprowadź auto</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Strona główna</a></li>
+                <li class="additional-options">
+                    <a href="#">Sklep</a>
+                    <div class="options-content">
+                        <a href="sklep detail.html">Kosmetyki do auta oraz Car-Detailing</a>
+                        <a href="sklep czesci.html">Części samochodowe</a>
+                <li class="additional-options">
+                    <a href="#">Oferta</a>
+                    <div class="options-content">
+                        <a href="Sprowadź auto.html">Sprowadź auto</a>
+                        <a href="Kup teraz.html">Kup teraz</a>
+                    </div>
+                </li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li class="additional-options">
+                    <a href="#">Detailing</a>
+                    <div class="options-content">
+                        <
+                        <a href="Cennik.html">Cennik</a>
+                        <a href="Realizacje.html">Realizacje</a>
+                    </div>
+                </li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="O nas.html">O nas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="transport-calculator">
+        <h2>Kalkulator kosztu transportu samochodu do Polski</h2>
+
+        <form id="transport-form">
+            <div class="form-group">
+                <label for="distance">Odległość (km):</label>
+                <input type="number" id="distance" placeholder="Odległość w km">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Waga (kg):</label>
+                <input type="number" id="weight" placeholder="Waga w kg">
+            </div>
+
+            <div class="form-group">
+                <label for="car-value">Wartość samochodu:</label>
+                <input type="number" id="car-value" placeholder="Wartość w wybranej walucie">
+                <select id="currency">
+                    <option value="PLN">PLN</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="CAD">CAD</option>
+                    <option value="AUD">AUD</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transport-type">Rodzaj transportu:</label>
+                <select id="transport-type">
+                    <option value="sea">Morski</option>
+                    <option value="air">Lotniczy</option>
+                    <option value="road">Drogowy</option>
+                    <option value="rail">Kolejowy</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="calculateCost()">Oblicz koszt</button>
+        </form>
+
+
+        <div id="result"></div>
+    </div>
+
+    <article>
+        <div class="contact-link">
+            <a href="Kontakt.html" style="color: white;">Chcesz zamówić specjalne auto dla siebie? Wyślij nam wiadomość!</a>
+        </div>
+        <div class="oferta" style="margin-top: 120px;">
+            <div class="oferta" id="lightbox-gallery-1">
+                <h3>Porsche GT3 911</h3>
+                <p>Wspaniałe Porsche GT3 911 w doskonałym stanie. Pochodzi z Niemiec, idealne dla miłośników szybkich samochodów.</p>
+                <p class="price">Cena: 150 000 EUR</p>
+                <p>Orientacyjna cena sprowadzenia: 5 000 EUR</p>
+                <div class="gallery-images">
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121909.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121913.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121917.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121909.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121913.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121917.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121909.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121913.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121917.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121909.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121913.jpg" />
+                    <img src="oferta sprowadzenia/porsche gt3 911/20240525_121917.jpg" />
+                </div>
+                <div class="details">
+                    <h4>Dane techniczne:</h4>
+                    <ul>
+                        <li>Silnik: 4.0L Flat-6</li>
+                        <li>Moc: 500 KM</li>
+                        <li>Przyspieszenie 0-100 km/h: 3.4s</li>
+                        <li>Rok produkcji: 2022</li>
+                    </ul>
+                    <h4>Historia pojazdu:</h4>
+                    <p>Samochód regularnie serwisowany, bezwypadkowy, stan techniczny i wizualny oceniany na bardzo dobry.</p>
+                </div>
+            </div>
+            <div class="oferta" style="margin-top: 120px;">
+                <div class="gallery" id="lightbox-gallery-2">
+                    <h3>Porsche 911 Carrera RS2.7</h3>
+                    <p>Porsche 911 Carrera RS2.7, legendarny model z historią. Pochodzi z Japonii, idealne dla kolekcjonerów.</p>
+                    <p class="price">Cena: 400 000 USD</p>
+                    <p>Orientacyjna cena sprowadzenia: 6 000 USD</p>
+                    <div class="gallery-images">
+
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121753.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121740.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121735.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121753.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121740.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121735.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121753.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121740.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121735.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121753.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121740.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121735.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121753.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121740.jpg" />
+                        <img src="oferta sprowadzenia/porsche 911 carrera rs2.7/20240525_121735.jpg" />
+
+                    </div>
+                    <div class="details">
+                        <h4>Dane techniczne:</h4>
+                        <ul>
+                            <li>Silnik: 2.7L Flat-6</li>
+                            <li>Moc: 210 KM</li>
+                            <li>Przyspieszenie 0-100 km/h: 6.1s</li>
+                            <li>Rok produkcji: 1973</li>
+                        </ul>
+                        <h4>Historia pojazdu:</h4>
+                        <p>Samochód zarejestrowany w Japonii, stan bardzo dobry, regularnie serwisowany, bez śladów korozji.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="oferta" style="margin-top: 120px;">
+                <div class="gallery" id="lightbox-gallery-3">
+                    <h3>Chevy Silverado Lowrider</h3>
+                    <p>Wyjątkowy Chevy Silverado w stylu Lowrider. Pochodzi z USA, idealne auto na pokazy tuningowe.</p>
+                    <p class="price">Cena: 50 000 USD</p>
+                    <p>Orientacyjna cena sprowadzenia: 3 000 USD</p>
+                    <div class="gallery-images">
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121930.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121926.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121933.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121930.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121926.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121933.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121930.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121926.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121933.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121930.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121926.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121933.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121930.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121926.jpg" />
+                        <img src="oferta sprowadzenia/chevy silverado lowrider/20240525_121933.jpg" />
+                    </div>
+                    <div class="details">
+                        <h4>Dane techniczne:</h4>
+                        <ul>
+                            <li>Silnik: 5.3L V8</li>
+                            <li>Moc: 350 KM</li>
+                            <li>Przyspieszenie 0-100 km/h: 6.8s</li>
+                            <li>Rok produkcji: 2018</li>
+                        </ul>
+                        <h4>Historia pojazdu:</h4>
+                        <p>Samochód dostosowany do stylu Lowrider, regularnie serwisowany, bez kolizji, stan wizualny oceniany na bardzo dobry.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="oferta" style="margin-top: 120px;">
+                <div class="gallery" id="lightbox-gallery-4">
+                    <h3>Corvette z 1956 roku</h3>
+                    <p>Klasyczna Corvette z 1956 roku, prawdziwy skarb dla miłośników motoryzacji. Pochodzi z USA.</p>
+                    <p class="price">Cena: 150 000 USD</p>
+                    <p>Orientacyjna cena sprowadzenia: 7 000 USD</p>
+                    <div class="gallery-images">
+                        <img src="oferta sprowadzenia/corvette/20240525_121852.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121855.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121859.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121852.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121855.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121859.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121852.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121855.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121859.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121852.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121855.jpg" />
+                        <img src="oferta sprowadzenia/corvette/20240525_121859.jpg" />
+                    </div>
+                    <div class="details">
+                        <h4>Dane techniczne:</h4>
+                        <ul>
+                            <li>Silnik: 4.3L V8</li>
+                            <li>Moc: 210 KM</li>
+                            <li>Przyspieszenie 0-100 km/h: 8.5s</li>
+                            <li>Rok produkcji: 1956</li>
+                        </ul>
+                        <h4>Historia pojazdu:</h4>
+                        <p>Samochód w pełni odrestaurowany, zachowany w oryginalnym stylu, bezwypadkowy, regularnie serwisowany.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="oferta" style="margin-top: 120px;">
+                <div class="gallery" id="lightbox-gallery-5">
+                    <h3>Mazda RX7 Savanna FC3S</h3>
+                    <p>Legendarne Mazda RX7 Savanna FC3S, idealne auto dla entuzjastów japońskich sportowych samochodów.</p>
+                    <p class="price">Cena: 30 000 USD</p>
+                    <p>Orientacyjna cena sprowadzenia: 4 000 USD</p>
+                    <div class="gallery-images">
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121835.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121840.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121845.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121835.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121840.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121845.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121835.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121840.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121845.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121835.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121840.jpg" />
+                        <img src="oferta sprowadzenia/Mazda rx7 fc35/20240525_121845.jpg" />
+                    </div>
+                    <div class="details">
+                        <h4>Dane techniczne:</h4>
+                        <ul>
+                            <li>Silnik: 1.3L Wankel turbo</li>
+                            <li>Moc: 255 KM</li>
+                            <li>Przyspieszenie 0-100 km/h: 5.3s</li>
+                            <li>Rok produkcji: 1987</li>
+                        </ul>
+                        <h4>Historia pojazdu:</h4>
+                        <p>Samochód w dobrym stanie, pochodzi z Japonii, regularnie serwisowany, bez poważnych uszkodzeń.</p>
+                    </div>
+                </div>
+            </div>
+    </article>
+    <footer>
+
+
+        <p>&copy; 2024 Komis Samochodowy. Wszelkie prawa zastrzeżone. <br>Autor: Łukasz Skwara <br> Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.gallery-images').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                nextArrow: '<button type="button" class="slick-next">Next</button>'
+            });
+        });
+        function calculateCost() {
+            var distance = document.getElementById("distance").value;
+            var weight = document.getElementById("weight").value;
+            var carValue = document.getElementById("car-value").value;
+            var transportType = document.getElementById("transport-type").value;
+            var currency = document.getElementById("currency").value;
+
+            // Przelicznik walutowy
+            var exchangeRates = {
+                "USD": 1.0,
+                "EUR": 0.90,
+                "PLN": 4.00,
+                "GBP": 0.80,
+                "JPY": 110.00,
+                "CAD": 1.30,
+                "AUD": 1.40
+            };
+            var transportCosts = {
+                "sea": 50,  
+                "air": 200, 
+                "road": 30, 
+                "rail": 40   
+            };
+            var totalCostPLN = transportCosts[transportType] * distance + weight * 0.1 + carValue * 0.02;
+            var totalCost = totalCostPLN / exchangeRates[currency];
+         
+            document.getElementById("result").innerHTML = "Koszt transportu: " + totalCost.toFixed(2) + " " + currency;
+        }
+    </script>
+
+
+</body>
+</html>

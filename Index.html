@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komis Samochodowy Squar-Car - Realizacje</title>
+    <link rel="stylesheet" href="Menu.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        article {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        header {
+            background-color: #444;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+                color: orange; 
+            }
+
+            header nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+                header nav ul li {
+                    margin-right: 20px;
+                }
+
+                    header nav ul li a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 16px;
+                        padding: 5px 10px; 
+                        border-radius: 4px; 
+                    }
+
+                        header nav ul li a:hover {
+                            color: #fff;
+                            background-color: orange; 
+                        }
+
+        .additional-options .options-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            border: 1px solid orange;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+
+        .additional-options:hover .options-content {
+            display: block;
+        }
+
+        .additional-options .options-content a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+            .additional-options .options-content a:hover {
+                background-color: orange; 
+            }
+        .realizacja {
+            margin-bottom: 40px;
+        }
+
+            .realizacja h3 {
+                margin-bottom: 10px;
+                text-align: center;
+                color: orange; 
+
+            }
+
+            .realizacja p {
+                margin-bottom: 10px;
+                text-align: justify;
+            }
+
+        .gallery {
+            margin-bottom: 20px;
+        }
+
+            .gallery img {
+                width: 100%;
+                max-width: 300px;
+                display: block;
+                margin: 0 auto;
+            }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: orange; 
+
+        }
+
+        footer {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+            footer p {
+                margin: 0;
+                font-size: 14px;
+            }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #444;
+            border: 2px solid orange;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+            .button:hover {
+                background-color: orange;
+                color: #444;
+            }
+        aside {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            color: #fff;
+            margin: 20px auto;
+            max-width: 300px;
+        }
+
+            aside h3 {
+                color: orange; 
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            aside p {
+                text-align: center;
+                margin: 10px 0;
+            }
+
+       
+
+        .slider {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+            .slider img {
+                width: 100%;
+                border-radius: 8px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        
+        \
+
+        <h1>Komis Samochodowy Squar-Car</h1>
+        <nav>
+            
+            <ul>
+                <li><a href="Index.html">Strona główna</a></li>
+                <li class="additional-options">
+                    <a href="#">Sklep</a>
+                    <div class="options-content">
+                        <a href="sklep detail.html">Kosmetyki do auta oraz Car-Detailing</a>
+                        <a href="sklep czesci.html">Części samochodowe</a>
+                <li class="additional-options">
+                    <a href="#">Oferta</a>
+                    <div class="options-content">
+                        <a href="Sprowadź auto.html">Sprowadź auto</a>
+                        <a href="Kup teraz.html">Kup teraz</a>
+                    </div>
+                </li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li class="additional-options">
+                    <a href="#">Detailing</a>
+                    <div class="options-content">
+                        <a href="Cennik.html">Cennik</a>
+                        <a href="Realizacje.html">Realizacje</a>
+                    </div>
+                </li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="Opinie klientów.html">Opinie</a></li>
+                <li><a href="O nas.html">O nas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside style="background-image: url('tło licznikowa.jpg'); background-size: cover; background-position: center;">
+        <h3>Informacje</h3>
+        <p id="zegar"></p>
+        <p id="data"></p>
+        <p>Liczba odwiedzin: <span id="licznik"></span></p>
+        <p>Czas spędzony na stronie: <span id="czasNaStronie"></span></p>
+        <canvas id="analogClock" width="270" height="270">
+        </canvas>
+    </aside>
+
+    <article>
+       
+        <h2>Witamy w naszym komisie samochodowym!</h2>
+        <p>Więcej informacji o nas znajdziesz w prezentacji ponieżej!</p>
+        <style>
+            .slick-dots {
+                bottom: 20px; 
+            }
+
+                .slick-dots li button {
+                    background-color: #fff; 
+
+                    width: 12px; 
+
+                    height: 12px; 
+                    border-radius: 50%; 
+                    border: 2px solid orange; 
+                }
+
+                .slick-dots li.slick-active button {
+                    width: 16px; 
+                    height: 16px; 
+                    background-color: orange; 
+                }
+        </style>
+        <style>
+            .slick-slide {
+                transition: opacity 0.5s ease-in-out;
+            }
+        </style>
+       
+        <div class="slider">
+            <div class="slide"><img src="slajd1.jpg" alt="Slajd 1"></div>
+            <div class="slide"><img src="slajd2.jpg" alt="Slajd 2"></div>
+            <div class="slide"><img src="slajd3.jpg" alt="Slajd 3"></div>
+            <div class="slide"><img src="slajd4.jpg" alt="Slajd 4"></div>
+            <div class="slide"><img src="slajd5.jpg" alt="Slajd 5"></div>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2024 Komis Samochodowy. Wszelkie prawa zastrzeżone. <br>Autor: Łukasz Skwara <br> Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 3000, 
+                arrows: true,
+            });
+        });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

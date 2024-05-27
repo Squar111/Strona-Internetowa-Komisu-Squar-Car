@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komis Samochodowy Squar-Car - Opinie Klientów</title>
+    <link rel="stylesheet" href="Menu.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        article {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+       
+        header {
+            background-color: #444;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+                color: orange; 
+            }
+
+            header nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+                header nav ul li {
+                    margin-right: 20px;
+                }
+
+                    header nav ul li a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 16px;
+                        padding: 5px 10px; 
+                        border-radius: 4px; 
+                    }
+
+                        header nav ul li a:hover {
+                            color: #fff;
+                            background-color: orange;
+                        }
+
+        .additional-options .options-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            border: 1px solid orange;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+
+        .additional-options:hover .options-content {
+            display: block;
+        }
+
+        .additional-options .options-content a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+            .additional-options .options-content a:hover {
+                background-color: orange; 
+            }
+
+        
+        .reviews-section {
+            margin-bottom: 40px;
+        }
+
+            .reviews-section h2 {
+                text-align: center;
+                color: orange; 
+                margin-bottom: 20px;
+            }
+
+        .review-form {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 8px;
+        }
+
+            .review-form label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .review-form input[type="text"],
+            .review-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #555;
+                border-radius: 4px;
+                background-color: #222;
+                color: #fff;
+            }
+
+            .review-form input[type="submit"] {
+                background-color: orange;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+                .review-form input[type="submit"]:hover {
+                    background-color: #ff9900;
+                }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+            .star-rating input {
+                display: none;
+            }
+
+            .star-rating label {
+                font-size: 30px;
+                color: #555;
+                cursor: pointer;
+            }
+
+                .star-rating input:checked ~ label,
+                .star-rating label:hover,
+                .star-rating label:hover ~ label {
+                    color: orange;
+                }
+
+        .review {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #555;
+        }
+
+            .review:last-child {
+                border-bottom: none;
+            }
+
+            .review h3 {
+                color: orange;
+            }
+
+            .review p {
+                margin: 10px 0;
+            }
+
+            .review .rating {
+                color: orange;
+            }
+
+        footer {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+            footer p {
+                margin: 0;
+                font-size: 14px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <h1>Komis Samochodowy Squar-Car</h1>
+        <nav>
+           
+            <ul>
+                <li><a href="Index.html">Strona główna</a></li>
+                <li class="additional-options">
+                    <a href="#">Sklep</a>
+                    <div class="options-content">
+                        <a href="sklep_detail.html">Kosmetyki do auta oraz Car-Detailing</a>
+                        <a href="sklep_czesci.html">Części samochodowe</a>
+                    </div>
+                </li>
+                <li class="additional-options">
+                    <a href="#">Oferta</a>
+                    <div class="options-content">
+                        <a href="Sprowadz_auto.html">Sprowadź auto</a>
+                        <a href="Kup_teraz.html">Kup teraz</a>
+                    </div>
+                </li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+                <li class="additional-options">
+                    <a href="#">Detailing</a>
+                    <div class="options-content">
+                        <a href="Cennik.html">Cennik</a>
+                        <a href="Realizacje.html">Realizacje</a>
+                    </div>
+                </li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="Opinie klientów.html">Opinie</a></li>
+                <li><a href="O nas.html">O nas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+       
+        <div class="review-form">
+            <h2>Dodaj swoją opinię</h2>
+            <form action="https://formspree.io/f/mnqeyrnv" method="POST">
+                <label for="name">Twoje imię:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="review">Twoja opinia:</label>
+                <textarea id="review" name="review" rows="4" required></textarea>
+
+                <label for="rating">Twoja ocena:</label>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+
+                <input type="submit" value="Dodaj opinię">
+            </form>
+        </div>
+
+        
+        <div class="reviews-section">
+            <h2>Opinie Naszych Klientów</h2>
+
+            <div class="review">
+                <h3>Jan Kowalski</h3>
+                <p>"Świetna obsługa i doskonały wybór samochodów. Zdecydowanie polecam!"</p>
+                <p class="rating">★★★★★</p>
+            </div>
+
+            <div class="review">
+                <h3>Anna Nowak</h3>
+                <p>"Bardzo profesjonalne podejście do klienta. Kupiłam auto w świetnym stanie."</p>
+                <p class="rating">★★★★★</p>
+            </div>
+
+            <div class="review">
+                <h3>Piotr Wiśniewski</h3>
+                <p>"Szybka i bezproblemowa transakcja. Jestem bardzo zadowolony z zakupu."</p>
+                <p class="rating">★★★★★</p>
+            </div>
+
+            <div class="review">
+                <h3>Monika Zielińska</h3>
+                <p>"Świetne ceny i profesjonalna obsługa. Zdecydowanie polecam ten komis."</p>
+                <p class="rating">★★★★★</p>
+            </div>
+
+            <div class="review">
+                <h3>Paweł Kamiński</h3>
+                <p>"Duży wybór aut i bardzo miła obsługa. Na pewno wrócę!"</p>
+                <p class="rating">★★★★★</p>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        
+        <p>&copy; 2024 Komis Samochodowy. Wszelkie prawa zastrzeżone. <br>Autor: Łukasz Skwara <br> Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.</p>
+    </footer>
+</body>
+</html>

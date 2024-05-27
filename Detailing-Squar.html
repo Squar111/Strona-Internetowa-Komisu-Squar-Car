@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komis Samochodowy Squar-Car</title>
+    <link rel="stylesheet" href="Menu.css">
+    <style>
+        /* Dodatkowe style dla tabeli */
+        article {
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: #f9f9f9; /* Tło dla komórek */
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Nawigacja */
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Ustawienie flexbox */
+        }
+
+            header nav ul li {
+                margin-right: 20px; /* Odstęp między linkami */
+            }
+
+                header nav ul li a {
+                    text-decoration: none;
+                    color: inherit; /* Kolor dziedziczony z rodzica (domyślny kolor tekstu) */
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+                    header nav ul li a:hover {
+                        color: #555; /* Kolor linków po najechaniu kursorem */
+                    }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Nagłówek strony -->
+        <h1>Komis Samochodowy Squar-Car</h1>
+    </header>
+
+    <nav>
+        <!-- Nawigacja -->
+        <ul>
+            <li><a href="Index.html">Strona główna</a></li>
+            <li><a href="Oferta.html">Oferta</a></li>
+            <li><a href="Kontakt.html">Kontakt</a></li> <!-- Dodaliśmy odnośnik do kontakt.html -->
+            <li class="detailing-dropdown">
+                <a href="#">Detailing</a>
+                <div class="dropdown-content">
+                    <a href="Cennik.html">Cennik</a>
+                    <a href="Realizacje.html">Realizacje</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    </header>
+
+    <article>
+        <!-- Treść główna strony -->
+        <h2>Witamy w naszym komisie samochodowym!</h2>
+        <p>Tutaj umieścimy opis oferty lub innych ważnych informacji.</p>
+
+        <!-- Wklejony kod tabeli -->
+        <h2>Cennik usług Car Detailing</h2>
+
+        <table id="cennikTable">
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Cena</th>
+                    <th>Czas trwania</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mycie zewnętrzne</td>
+                    <td>50 zł</td>
+                    <td>1 godzina</td>
+                </tr>
+                <tr>
+                    <td>Mycie wnętrza</td>
+                    <td>80 zł</td>
+                    <td>2 godziny</td>
+                </tr>
+                <!-- Dodaj tutaj pozostałe wiersze z usługami -->
+                <!-- Każdy wiersz powinien mieć trzy komórki: Nazwę usługi, cenę i czas trwania -->
+            </tbody>
+        </table>
+
+        <script>
+            // Funkcja do generowania tabeli na podstawie danych
+            function generujTabele() {
+                const uslugi = [
+                    { nazwa: "Mycie zewnętrzne", cena: "50 zł", czas: "1 godzina" },
+                    { nazwa: "Mycie wnętrza", cena: "80 zł", czas: "2 godziny" },
+                    { nazwa: "Woskowanie", cena: "120 zł", czas: "2 godziny" },
+                    { nazwa: "Ozonowanie", cena: "100 zł", czas: "1 godzina" },
+                    { nazwa: "Czyszczenie tapicerki", cena: "150 zł", czas: "3 godziny" },
+                    { nazwa: "Polerowanie", cena: "200 zł", czas: "3 godziny" },
+                    { nazwa: "Nanokosmetyka", cena: "300 zł", czas: "4 godziny" },
+                    { nazwa: "Ochrona lakieru", cena: "250 zł", czas: "3 godziny" },
+                    { nazwa: "Pranie dywaników", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Nanohydrofobizacja szyb", cena: "100 zł", czas: "1 godzina" },
+                    { nazwa: "Mycie felg", cena: "30 zł", czas: "30 minut" },
+                    { nazwa: "Usuwanie smug", cena: "60 zł", czas: "1 godzina" },
+                    { nazwa: "Naprawa rys lakieru", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Ochrona tapicerki", cena: "120 zł", czas: "2 godziny" },
+                    { nazwa: "Detailing wnętrza", cena: "200 zł", czas: "3 godziny" },
+                    { nazwa: "Mycie silnika", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Czyszczenie skóry", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Renowacja plastików", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Usuwanie owadów", cena: "50 zł", czas: "1 godzina" },
+                    { nazwa: "Kaucja antykorozyjna", cena: "300 zł", czas: "4 godziny" },
+                    { nazwa: "Pakiet Premium", cena: "600 zł", czas: "8 godzin" },
+                    { nazwa: "Pranie foteli", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Nanoceramika", cena: "400 zł", czas: "6 godzin" },
+                    { nazwa: "Odgrzybianie klimatyzacji", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Naprawa rys na szybach", cena: "120 zł", czas: "2 godziny" },
+                    { nazwa: "Pranie skóry", cena: "120 zł", czas: "2 godziny" },
+                    { nazwa: "Wymiana żarówki", cena: "30 zł", czas: "30 minut" },
+                    { nazwa: "Nanowosk", cena: "180 zł", czas: "3 godziny" },
+                    { nazwa: "Pranie tapicerki", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Nanoshampoo", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Czyszczenie lakieru", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Nanowypełniacz", cena: "250 zł", czas: "3 godziny" },
+                    { nazwa: "Naprawa ubytków lakieru", cena: "200 zł", czas: "3 godziny" },
+                    { nazwa: "Czyszczenie plastików", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Ochrona felg", cena: "100 zł", czas: "1 godzina" },
+                    { nazwa: "Wypolerowanie szyb", cena: "60 zł", czas: "1 godzina" },
+                    { nazwa: "Renowacja skóry", cena: "200 zł", czas: "3 godziny" },
+                    { nazwa: "Naprawa rys na lakierze", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Myjka bezdotykowa", cena: "40 zł", czas: "30 minut" },
+                    { nazwa: "Nanocleaner", cena: "90 zł", czas: "1 godzina" },
+                    { nazwa: "Czyszczenie felg", cena: "50 zł", czas: "1 godzina" },
+                    { nazwa: "Korekta lakieru", cena: "350 zł", czas: "5 godzin" },
+                    { nazwa: "Renowacja lamp", cena: "120 zł", czas: "2 godziny" },
+                    { nazwa: "Nanowypełniacz rys", cena: "180 zł", czas: "3 godziny" },
+                    { nazwa: "Kamienie ozdobne", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Zabezpieczenie skóry", cena: "100 zł", czas: "1 godzina" },
+                    { nazwa: "Naprawa zarysowań", cena: "200 zł", czas: "3 godziny" },
+                    { nazwa: "Nanoprotektor lakieru", cena: "250 zł", czas: "3 godziny" },
+                    { nazwa: "Naprawa odprysków", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Renowacja plastiku", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Regeneracja skóry", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Odkamienianie lakieru", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Ozonowanie wnętrza", cena: "100 zł", czas: "1 godzina" },
+                    { nazwa: "Detailing felg", cena: "50 zł", czas: "1 godzina" },
+                    { nazwa: "Detailing tapicerki", cena: "120 zł", czas: "2 godziny" },
+                    { nazwa: "Renowacja plastików zewnętrznych", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Konsultacja z ekspertem", cena: "50 zł", czas: "1 godzina" },
+                    { nazwa: "Pranie podłogi", cena: "60 zł", czas: "1 godzina" },
+                    { nazwa: "Detailing silnika", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Nanotechnologia", cena: "200 zł", czas: "3 godziny" },
+                    { nazwa: "Odgrzybianie wnętrza", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Usuwanie smrodu", cena: "100 zł", czas: "1 godzina" },
+                    { nazwa: "Pranie bagażnika", cena: "50 zł", czas: "30 minut" },
+                    { nazwa: "Zabezpieczenie lakieru", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Detailing lamp", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Renowacja chromu", cena: "120 zł", czas: "2 godziny" },
+                    { nazwa: "Polerowanie felg", cena: "50 zł", czas: "1 godzina" },
+                    { nazwa: "Olejowanie tapicerki", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Detailing szyb", cena: "60 zł", czas: "1 godzina" },
+                    { nazwa: "Zabezpieczenie tapicerki", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Renowacja zderzaka", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Usuwanie wgnieceń", cena: "100 zł", czas: "1 godzina" },
+                    { nazwa: "Detailing wnętrza", cena: "200 zł", czas: "3 godziny" },
+                    { nazwa: "Pranie dachu", cena: "50 zł", czas: "30 minut" },
+                    { nazwa: "Olejowanie plastików", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Renowacja drzwi", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Detailing nadwozia", cena: "250 zł", czas: "3 godziny" },
+                    { nazwa: "Nanowoskowanie", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Naprawa ubytków tapicerki", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Czyszczenie wnętrza", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Renowacja felg", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Czyszczenie lakieru", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Naprawa lakieru", cena: "200 zł", czas: "3 godziny" },
+                    { nazwa: "Ochrona lakieru", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Nanoprotektor", cena: "180 zł", czas: "3 godziny" },
+                    { nazwa: "Renowacja wnętrza", cena: "200 zł", czas: "3 godziny" },
+                    { nazwa: "Nanokeramika", cena: "300 zł", czas: "4 godziny" },
+                    { nazwa: "Zabezpieczenie skóry", cena: "120 zł", czas: "2 godziny" },
+                    { nazwa: "Detailing podwozia", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Wosk", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Olejowanie elementów plastikowych", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Renowacja lakieru", cena: "250 zł", czas: "3 godziny" },
+                    { nazwa: "Czyszczenie deski rozdzielczej", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Czyszczenie felg z zewnętrznej strony", cena: "50 zł", czas: "1 godzina" },
+                    { nazwa: "Nanohydrofobizacja lakieru", cena: "180 zł", czas: "3 godziny" },
+                    { nazwa: "Czyszczenie dywanów", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Regeneracja tapicerki", cena: "150 zł", czas: "2 godziny" },
+                    { nazwa: "Pranie siedzeń", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Detailing drzwi", cena: "100 zł", czas: "2 godziny" },
+                    { nazwa: "Naprawa lakieru bez lakierowania", cena: "120 zł", czas: "2 godziny" },
+                    { nazwa: "Olejowanie drewnianych elementów", cena: "60 zł", czas: "1 godzina" },
+                    { nazwa: "Detailing bagażnika", cena: "80 zł", czas: "1 godzina" },
+                    { nazwa: "Renowacja szyb", cena: "100 zł", czas: "2 godziny" }
+                ];
+
+                const tbody = document.querySelector('#cennikTable tbody');
+                uslugi.forEach(usluga => {
+                    const tr = document.createElement('tr');
+                    const tdNazwa = document.createElement('td');
+                    const tdCena = document.createElement('td');
+                    const tdCzas = document.createElement('td');
+
+                    tdNazwa.textContent = usluga.nazwa;
+                    tdCena.textContent = usluga.cena;
+                    tdCzas.textContent = usluga.czas;
+
+                    tr.appendChild(tdNazwa);
+                    tr.appendChild(tdCena);
+                    tr.appendChild(tdCzas);
+
+                    tbody.appendChild(tr);
+                });
+            }
+
+            // Wywołanie funkcji generującej tabelę
+            generujTabele();
+        </script>
+    </article>
+
+    <footer>
+        <!-- Stopka strony -->
+        <p>&copy; 2024 Komis Samochodowy. Wszelkie prawa zastrzeżone. <br>Autor: Łukasz Skwara <br> Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
